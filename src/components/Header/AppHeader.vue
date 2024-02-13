@@ -7,6 +7,7 @@ export default {
     data () {
         return {
             store,
+            toggle: false
         }
     },
 }
@@ -31,10 +32,10 @@ export default {
         </div>
 
         <div class="search-bar">
-            <button class="button-search" type="submit">
+            <button class="button-search" type="submit" @click.prevent="$emit('search')">
                 <font-awesome-icon icon="fas fa-search" />
             </button>
-            <input class="search-input" type="text" placeholder="Cerca un film o una serie tv">
+            <input class="search-input" type="text" v-model="store.searchFilm" @keyup.enter="$emit('search')" placeholder="Cerca un film o una serie tv">
         </div>
     </header>
 </template>

@@ -20,7 +20,7 @@ export default {
             let api = store.apiUrl;
 
             if (store.searchFilm !="") {
-                api = `$(store.SearchMovieUrl)&query=$(store.searchFilm)`
+                api = `${store.searchMovieUrl}&query=${store.searchFilm}`
             }
 
             axios.get (api).then (res => {
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-    <AppHeader></AppHeader>
+    <AppHeader @search="getFilm"></AppHeader>
     <AppMain></AppMain>
 </template>
 
