@@ -1,0 +1,12 @@
+@use './partials/variables.scss' as *;
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import 'node_modules/@fontsource/montserrat/index.css';
+@import 'node_modules/@fontsource/montserrat/700.css';
+
+@import "@fontsource/bebas-neue";
+
+body {
+    background-color: black;
+}
