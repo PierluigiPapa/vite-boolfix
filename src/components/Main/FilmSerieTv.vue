@@ -54,9 +54,7 @@ export default {
     <div class="cards-hover">
         <img :src="`https://image.tmdb.org/t/p/w342/${info.poster_path}`" alt="">
 
-        <!-- Details of card -->
         <div class="details">
-            <!-- template di card singola -->
             <div>
                 <span>
                     <strong> Titolo:</strong>
@@ -68,14 +66,11 @@ export default {
                 {{ info.original_title }}
             </div>
 
-            <!-- Flags -->
-            <!-- se nel loop, il flag nell'array include original_langue allora RETURN l'array immagine in base al lang (PS. il lang dell'array deve essere uguale al lang dell'API) -->
             <div class="flags">
                 <span> Language:</span>
                 <img :src="flagEmoji" alt="">
             </div>
 
-            <!-- Stars [ star in rateFilm ( nella quale il voto da 10 diventa 5)] -->
             <div class="stars">
                 <span>Voto:</span>
 

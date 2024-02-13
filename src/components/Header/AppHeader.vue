@@ -79,7 +79,6 @@ export default {
 
         .search-input {
             border: 1px solid lightgray;
-            color: white;
         }
     }
 </style>

@@ -17,7 +17,7 @@ export default {
 
 <template>
     <section>
-        <div class="container cards "> <!-- to add d-flex % flex wrap -->
+        <div class="container cards "> 
             <div class="row" v-for="film in store.movieList" :key="film.id">
                 <FilmSerieTv :info="film" />
             </div>
