@@ -10,10 +10,11 @@ export default {
 </script>
 
 <template>
+    <AppHeader></AppHeader>
   
 </template>
 
 <style lang="scss">
-
+@use "./styles/general.scss" as *;
 
 </style>
