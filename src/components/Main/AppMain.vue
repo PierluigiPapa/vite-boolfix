@@ -17,7 +17,7 @@ export default {
 
 <template>
     <section>
-        <div class="container -cards "> <!-- to add d-flex % flex wrap -->
+        <div class="container cards "> <!-- to add d-flex % flex wrap -->
             <div class="row" v-for="film in store.movieList" :key="film.id">
                 <FilmSerieTv :info="film" />
             </div>
@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss">
 
-.-cards {
+.cards {
     display: flex;
     justify-content: center;
     gap: 1.25rem;
