@@ -1,6 +1,12 @@
 <script>
 export default {
     name: "FilmSerieTv",
+    props: ['info'],
+    data () {
+        return {
+            
+        }
+    }
 }
 
 </script>

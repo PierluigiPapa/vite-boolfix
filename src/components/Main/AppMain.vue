@@ -1,6 +1,14 @@
 <script>
+import { store } from '../../store.js';
+
+
 export default {
     name: "AppMain",
+    data () {
+        return {
+            store,
+        }
+    }
 }
 
 </script>
@@ -8,7 +16,9 @@ export default {
 <template>
     <section>
         <div class="container cards">
-            <div class="row"></div>
+            <div class="row" v-for="film in store.movieList" :key="film.id">
+                <FilmSerieTV :info="film">
+            </div>
         </div>
     </section>
 </template>
@@ -29,4 +39,3 @@ export default {
 
 
 </style>
-

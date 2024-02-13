@@ -1,6 +1,14 @@
 <script>
+import { store } from '../../store.js';
+
 export default {
     name: 'AppHeader',
+    props: ["title"],
+    data () {
+        return {
+            store,
+        }
+    },
 }
 
 </script>
@@ -26,7 +34,7 @@ export default {
             <button class="button-search" type="submit">
                 <font-awesome-icon icon="fas fa-search" />
             </button>
-            <input class="search-input"  type="text" placeholder="Cerca un film o una serie tv">
+            <input class="search-input" type="text" placeholder="Cerca un film o una serie tv">
         </div>
     </header>
 </template>
