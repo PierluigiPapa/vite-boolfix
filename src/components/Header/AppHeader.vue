@@ -26,7 +26,7 @@ export default {
                 <a href="">Film</a>
                 <a href="">Nuovi e Popolari</a>
                 <a href="">La mia lista</a>
-                <a href="">Sfoglia per la lingue</a>
+                <a href="">Sfoglia per le lingue</a>
             </nav>
         </div>
 
