@@ -17,7 +17,7 @@ export default {
     <section>
         <div class="container cards">
             <div class="row" v-for="film in store.movieList" :key="film.id">
-                <FilmSerieTV :info="film">
+                <FilmSerieTV :info="film"/>
             </div>
         </div>
     </section>
