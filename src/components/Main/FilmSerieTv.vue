@@ -1,47 +1,45 @@
 <script>
+import { store } from '../../store.js';
+
 export default {
     name: 'SingleFilm',
     props: ['info'],
     data() {
         return {
             hover: false,
+            flagBaseUrl: store.flagUrl,
             flags: [
                 {
-                    img: 'img/france.png',
                     lang: "fr"
                 },
                 {
-                    img: 'img/german-flag.png',
                     lang: "de"
                 },
                 {
-                    img: 'img/italy.png',
                     lang: "it"
                 },
                 {
-                    img: 'img/united-kingdom.png',
                     lang: "en"
                 },
                 {
-                    img: 'img/spain.png',
                     lang: "es"
                 },
                 {
-                    img: 'img/unflag.png',
-                    lang: ""
+                    lang: "ko"
                 },
             ]
         }
     },
     computed: {
-        flagEmoji() {
-
-            for (let i = 0; i < this.flags.length; i++) {
-                if (this.flags[i].lang.includes(this.info.original_language)) {
-                    return this.flags[i].img
-                }
+        flagUrl() {
+            console.log("Lingua originale del film:", this.info.original_language);
+            const languageCode = this.info.original_language.toLowerCase();
+            const flag = this.flags.find(flag => flag.lang === languageCode);
+            if (flag) {
+                return `${this.flagBaseUrl}${languageCode}.png`;
+            } else {
+                return `${this.flagBaseUrl}unknown.png`;
             }
-            return this.flags[this.flags.length - 1].img
         },
         rateFilm() {
             return Math.round(this.info.vote_average / 2);
@@ -68,7 +66,7 @@ export default {
 
             <div class="flags">
                 <span>Lingua originale:</span>
-                <img :src="flagEmoji" alt="">
+                <img :src="flagUrl" alt="">
             </div>
 
             <div class="stars">

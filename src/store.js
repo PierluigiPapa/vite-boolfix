@@ -6,4 +6,5 @@ export const store = reactive({
     searchFilm: '',
     searchMovieUrl: 'https://api.themoviedb.org/3/search/tv?api_key=9711d2b2e34497ce2672c19925f1edf1&language=it',
     searchFilm: '',
+    flagUrl: 'https://flagcdn.com/256x192/',
 })
