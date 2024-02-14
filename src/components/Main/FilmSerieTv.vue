@@ -57,17 +57,17 @@ export default {
         <div class="details">
             <div>
                 <span>
-                    <strong> Titolo:</strong>
+                    <strong>Titolo:</strong>
                     {{ info.title }}
                 </span>
             </div>
             <div>
-                <strong> Titolo Originale:</strong>
+                <strong>Titolo Originale:</strong>
                 {{ info.original_title }}
             </div>
 
             <div class="flags">
-                <span> Language:</span>
+                <span>Lingua originale:</span>
                 <img :src="flagEmoji" alt="">
             </div>
 
@@ -84,7 +84,7 @@ export default {
             </div>
 
             <div class="my-5">
-                <strong>Overview: </strong>
+                <strong>Descrizione:</strong>
                 {{ info.overview }}
             </div>
         </div>
