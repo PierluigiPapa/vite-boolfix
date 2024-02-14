@@ -1,33 +1,10 @@
 <script>
-import { store } from '../../store.js';
-
 export default {
     name: 'SingleFilm',
     props: ['info'],
     data() {
         return {
             hover: false,
-            flagBaseUrl: store.flagUrl,
-            flags: [
-                {
-                    lang: "fr"
-                },
-                {
-                    lang: "de"
-                },
-                {
-                    lang: "it"
-                },
-                {
-                    lang: "en"
-                },
-                {
-                    lang: "es"
-                },
-                {
-                    lang: "ko"
-                },
-            ]
         }
     },
     computed: {
@@ -66,7 +43,7 @@ export default {
 
             <div class="flags">
                 <span>Lingua originale:</span>
-                <img :src="flagUrl" alt="">
+                <span :class="`lang-icon lang-icon-${info.original_language}`"></span>
             </div>
 
             <div class="stars">
@@ -125,11 +102,17 @@ export default {
 }
 
 .flags {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .lang-icon {
+        margin-bottom: -3px;
+        margin-left: 5px;
+        box-shadow: 11px 9px 15px 0px rgba(0,0,0,0.75);
+    }
 
     img {
-        margin-left: 5px;
+        margin-left: 10px;
         width: 30px;
     }
 }
