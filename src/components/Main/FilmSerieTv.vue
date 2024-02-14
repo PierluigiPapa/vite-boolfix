@@ -31,14 +31,12 @@ export default {
 
         <div class="details">
             <div>
-                <span>
-                    <strong>Titolo:</strong>
-                    {{ info.title }}
-                </span>
+                <strong>Titolo:</strong> <span>{{ info.title || info.name }}</span>
             </div>
+
             <div>
-                <strong>Titolo Originale:</strong>
-                {{ info.original_title }}
+                <strong>Titolo Originale:</strong> <span v-show="(info.title !== info.original_title) || (info.name !== info.original_name)"> {{ info.original_title || info.original_name }} </span>
+                
             </div>
 
             <div class="flags">
